@@ -16,7 +16,7 @@ During initial deployment, the Android kernel instantiation failed due to lack o
 **Engineering Resolution:**
 Direct modifications were pushed to the virtualization engine configuration interface via the command-line control system to force-enable hardware acceleration capabilities on the guest kernel:
 ```cmd
-VBoxManage modifyvm "sde" --nested-hw-virt on
+VBoxManage modifyvm "kali" --nested-hw-virt on
 ```
 
 ### 3.2. Implicit Intent Subsystem Crash (`com.genymotion.genyd`)
@@ -42,7 +42,7 @@ adb shell am start -n com.android.mms/.ui.ComposeMessageActivity -d sms:53532556
 telnet localhost 6555
 
 # Interacting directly with the baseband system wrapper
-sms send 5353255678 Security_Analysis_Data_Simulation_Payload
+sms send 5XXXXXXXXX Security_Analysis_Data_Simulation_Payload
 ```
 
 ## 5. Defensive Conclusions & Remediation
